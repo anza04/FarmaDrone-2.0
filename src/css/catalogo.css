@@ -1,0 +1,153 @@
+.nav-bar{
+    height: 10vh;
+    width: 100vw;
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+
+  body{
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+  }
+  
+  .bar{
+    height: 100%;
+    width: 100%;
+    background: #DDDDDD;
+    border-top: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .circleCarrello
+  {
+    width: 40vw;
+    height: 40vw;
+    border-radius: 100px;
+    background: #64CC88;
+    position: absolute;
+    bottom: -50%;
+    left: 85%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4em;
+    color: black;
+    font-weight: bold;
+    border: solid black 2px;
+  }
+  
+  .imgCarrello
+{
+    height: 50%;
+    width: 40%;
+    background: url(../assets/vector.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .home
+  {
+    font-weight: bold;
+    color: black;
+    font-size: 25px;
+    text-transform: uppercase;
+    margin-left: 5%;
+  }
+
+
+  .content{
+    width: 90%;
+    overflow-x: hidden;
+    overflow-y:scroll;
+    display: flex;
+    flex-direction: column;
+    z-index: 0;
+  }
+
+
+  .cerca
+  {
+    width: 90%;
+    height: 5vh;
+    background: white;
+    padding: 5px;
+    border-radius: 10px;
+    color: black;
+    flex-shrink: 0;
+  }
+
+  .prodotto{
+    width: 48%;
+    height: 100%;
+    background: white;
+    margin: 2%;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 1px solid black;
+    overflow-x: hidden;
+  }
+
+  .filtri
+  {
+    height: 50px;
+    overflow-x: scroll;
+    margin: auto;
+    display: flex;
+    margin-top:4%;
+    margin-left:3.5%;
+    flex-shrink: 0;
+}
+
+.filtro
+{
+    height: 30px;
+    padding-right: 20px;
+    padding-left: 5px;
+    background: white;
+    border-radius: 10px;
+    margin-right: 3%;
+    text-align: left;
+    border: solid 2px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.prodotti{
+  display: grid;
+  justify-content: space-around;
+  align-items: space-evenly;
+  grid-template-columns: 48% 48%;
+}
+
+.card{
+  width: 98%;
+  height: 30vh;
+  background-color: white;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  flex-direction: column;
+  border-radius: 20px;
+  color: black;
+}
+
+.titolo{
+  text-transform: uppercase;
+  width: 40vw;
+  font-size: 15px;
+  text-align: center;
+}
+
+img{
+  height: 50%;
+}

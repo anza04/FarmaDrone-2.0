@@ -1,0 +1,149 @@
+.nav-bar{
+    height: 10vh;
+    width: 100vw;
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .bar{
+    height: 100%;
+    width: 100%;
+    background: #DDDDDD;
+    border-top: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .help{
+    margin-left: 10%;
+    height: 50%;
+    width: 10%;
+    background: url(../assets/help.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .profile{
+    margin-right: 10%;
+    height: 50%;
+    width: 10%;
+    background: url(../assets/profile.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  
+  .circle
+  {
+    width: 40vw;
+    height: 40vw;
+    border-radius: 100px;
+    background: #64CC88;
+    position: absolute;
+    bottom: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4em;
+    color: black;
+    font-weight: bold;
+    border: solid black 2px;
+  }
+  
+  .content
+  {
+    width: 80vw;
+    height: 80vh;
+    position: absolute;
+    top: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .tempo-consegna{
+    width: 97%;
+    height: 20%;
+    background: white;
+    border-radius: 20px;
+    border:solid black 2px;
+    margin-bottom: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+  }
+  
+  .ricette{
+    width: 97%;
+    height: 70%;
+    background: lightgrey;
+    border-radius: 20px;
+    border:solid black 2px;
+  }
+  
+  .testo
+  {
+    width: 40%;
+    height: 100%;
+    font-size: 12px;
+    text-align: center;
+    font-weight: bold;
+    margin-right: 5px;
+  }
+  .imgContainer
+  {
+    width: 65%;
+    height: 100%;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .testo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .immagine{
+    width: 80%;
+    height: 80%;
+    background: url(../assets/imgDrone.png);
+    background-size: cover;
+    
+  }
+  
+  .ricette{
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+  
+  .titoloRicette{
+    font-size: 25px;
+    font-weight: bold;
+    width: 90%;
+    text-align: center;
+    margin: 5%;
+    border-bottom: solid 2px black;
+  }
+  
+  .ricetta{
+    width: 90%;
+    height: 10%;
+    border: solid 2px black;
+    background: white;
+    margin: 5%;
+    border-radius: 15px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 14px;
+  }

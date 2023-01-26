@@ -1,0 +1,198 @@
+.nav-bar{
+    height: 10vh;
+    width: 100vw;
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+
+  body{
+    height: 100vh;
+    overflow-y: hidden;
+    color: black;
+  }
+  
+  .bar{
+    height: 100%;
+    width: 100%;
+    background: #DDDDDD;
+    border-top: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .help{
+    margin-left: 10%;
+    height: 50%;
+    width: 10%;
+    background: url(../assets/help.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .profile{
+    margin-right: 10%;
+    height: 50%;
+    width: 10%;
+    background: url(../assets/profile.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  
+  .circleAccount
+  {
+    width: 40vw;
+    height: 40vw;
+    border-radius: 100px;
+    background: #64CC88;
+    position: absolute;
+    bottom: -50%;
+    left: 85%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4em;
+    color: black;
+    font-weight: bold;
+    border: solid black 2px;
+  }
+  
+  .imgAccount
+{
+    height: 50%;
+    width: 40%;
+    background: url(../assets/help.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .home
+  {
+    font-weight: bold;
+    color: black;
+    font-size: 25px;
+    text-transform: uppercase;
+    margin-left: 5%;
+  }
+
+
+  .content{
+    width: 90%;
+    overflow:scroll;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    z-index: 0;
+  }
+
+  .info
+  {
+    height: 30%;
+    width: 100%;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10%;
+    flex-shrink: 0;
+  }
+
+.testo
+  {
+    width: 60%;
+    height: 100%;
+  }
+
+  .foto
+  {
+    background: url(../assets/Acc1.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 50%;
+    margin-right: 3%;
+    margin-left: 2%;
+  }
+
+  .testo
+  {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+  }
+
+.nome{
+    font-size: 20px;
+    margin-bottom: 3%;
+}
+
+.telefono,.email{
+    font-size: 15px;
+}
+
+.sezione{
+    width: 100%;
+    margin-bottom: 5%;
+}
+
+.titolo{
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 6%;
+}
+
+.element{
+    display: flex;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    text-align: start;
+    height: 4vh;
+    margin-bottom:3%;
+    background: white;
+    padding: 2%;
+    border-radius: 15px;
+    font-size: 20px;
+}
+
+
+#esci{
+  display: flex;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    text-align: start;
+    height: 4vh;
+    margin-bottom:3%;
+    background: white;
+    color: red;
+    padding: 2%;
+    border-radius: 15px;
+    font-size: 20px;
+}
+
+#elimina{
+  display: flex;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    text-align: start;
+    height: 4vh;
+    margin-bottom:3%;
+    background: red;
+    color: white;
+    padding: 2%;
+    border-radius: 15px;
+    font-size: 20px;
+}
