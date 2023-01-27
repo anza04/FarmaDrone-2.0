@@ -12,6 +12,9 @@
     height: 100vh;
     width: 100vw;
     overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   .bar{
@@ -65,11 +68,68 @@
   .back
 {
     position: absolute;
-    top: 10%;
-    left: 10%;
-    width: 20px;
-    height: 20px;
-    background: url(./public/Vector.png);
+    top: 5%;
+    left: 5%;
+    width: 40px;
+    height: 40px;
+    background: url(../public/arrow.png);
     background-size: contain;
     background-repeat: no-repeat;
   }
+
+.scheda{
+  height: 70vh;
+  width: 90vw;
+  background: white;
+  margin-bottom: 20px;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.infoProdotto, .descrizione, .azioniProdotto{
+  height: 30%;
+  width: 98%;
+}
+
+.fotoProdotto{
+  width: 50%;
+  height: 100%;
+}
+
+.azioniProdotto{
+  display: flex;
+  align-items: center;  
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.infoProdotto{
+  width: 100%;
+  height: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.testoProdotto{
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+.sopra, .sotto{
+  width: 80%;
+}
+
+.sotto{
+  margin-top: 10px;
+}
+
+.descrizione{
+  width: 80%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}

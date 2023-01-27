@@ -8,7 +8,7 @@ function Catalogo() {
   (
     <div className="card">
       <img src={props.src}/>
-      <div className="titolo" fontSize="15px">{props.nome}</div>
+      <div className="nomeProdotto" fontSize="15px">{props.nome}</div>
       <div className="prezzo">{props.prezzo}</div>
     </div>
   );
@@ -31,6 +31,8 @@ function Catalogo() {
                 <div className="filtro">Categoria</div>
                 <div className="filtro">Tipologia</div>
                 <div className="filtro">Produttore</div>
+                <div className="filtro">Categoria</div>
+                <div className="filtro">Tipologia</div>
                 <div className="filtro">Grammatura</div>
             </div>
 
