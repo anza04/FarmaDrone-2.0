@@ -3,9 +3,7 @@ import * as React from 'react';
 import Button from '@mui/material/Button';
 import '../css/root.css';
 import { Link } from 'react-router-dom';
-import "video-react/dist/video-react.css"; // import css
-import { Player, ControlBar } from 'video-react';
-import { render } from 'react-dom';
+
 
 export default function Root() {
 
@@ -20,9 +18,6 @@ export default function Root() {
   return (
     <div className="video">
       <video src="/My_video.mp4" autoPlay muted loop></video>
-      {/*<Player src='public/My_video.mp4' fluid={false} height={"100%"} muted={true} autoPlay={true}>
-        <ControlBar disableCompletely={true}></ControlBar>
-  </Player>*/}
      
     <div className="layer"></div>
 
