@@ -14,21 +14,6 @@ import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Link } from 'react-router-dom';
 
-function Copyright(props) {
-  return (
-    <Typography variant="body2" color="text.secondary" align="center" {...props}>
-      {'Copyright © '}
-      <a color="inherit" to={"/"}>
-        Farmadrone
-      </a>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
-
-const theme = createTheme();
-
 export default function Login() {
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -40,7 +25,7 @@ export default function Login() {
   };
 
   return (
-    <ThemeProvider theme={theme} sx={{background:'#D7F6CB'}}>
+    
       <Container component="main" maxWidth="xs" >
         <CssBaseline />
         <Box
@@ -51,23 +36,26 @@ export default function Login() {
             alignItems: 'center',
           }}
         >
-          <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+          <Avatar sx={{ m: 1, bgcolor: 'green' }}>
             <LockOutlinedIcon />
           </Avatar>
           <Typography component="h1" variant="h5">
             Sign in
           </Typography>
           <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1}}>
+
+            
             <TextField
               margin="normal"
               required
               fullWidth
               id="email"
-              label="Email Address"
+              label="Email"
               name="email"
               autoComplete="email"
               autoFocus
             />
+
             <TextField
               margin="normal"
               required
@@ -78,34 +66,24 @@ export default function Login() {
               id="password"
               autoComplete="current-password"
             />
-            <FormControlLabel
-              control={<Checkbox value="remember" color="primary" />}
-              label="ricorda utente"
-            />
+
             <Link to={'../home'}><Button
               type="submit"
               fullWidth
               variant="contained"
-              sx={{ mt: 3, mb: 2 ,background: '#64CC88'}}
+              sx={{ mt: 3, mb: 2 ,background: 'green'}}
             >
               Log in
             </Button></Link>
             <Grid container>
-              <Grid item xs>
-                <a href="#" variant="body2">
-                  Password dimenticata?
-                </a>
-              </Grid>
               <Grid item>
-                <a href="#" variant="body2">
+                <a href="./registrati" variant="body2">
                   {"Registrati"}
                 </a>
               </Grid>
             </Grid>
           </Box>
         </Box>
-        <Copyright sx={{ mt: 8, mb: 4 }} />
       </Container>
-    </ThemeProvider>
   );
 }

@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import Button from '@mui/material/Button'
 
 function Tachipirina() {
+
+  const [nProdotti, setNumero] = useState(0);
   
   return (
     <div className="Catalogo">
@@ -28,9 +30,9 @@ function Tachipirina() {
           </div>
           <div className="azioniProdotto">
             <div className="sopra">
-              <Button variant="contained" sx={{background:"white", color:"black", border:"solid black 1px",width:"25%"}}>-</Button>
-              <Button variant="contained" sx={{background:"#D9D9D9", color:"black", border:"solid black 1px",width:"50%"}}>0</Button>
-              <Button variant="contained" sx={{background:"white", color:"black", border:"solid black 1px",width:"25%"}}>+</Button>
+              <Button onClick={()=>setNumero(nProdotti-1)} variant="contained" sx={{background:"white", color:"black", border:"solid black 1px",width:"25%"}}>-</Button>
+              <Button variant="contained" sx={{background:"#D9D9D9", color:"black", border:"solid black 1px",width:"50%"}}>{nProdotti}</Button>
+              <Button onClick={()=>setNumero(nProdotti+1)} variant="contained" sx={{background:"white", color:"black", border:"solid black 1px",width:"25%"}}>+</Button>
             </div>
             <div className="sotto">
               <Button variant="contained" sx={{background:"#D9D9D9", color:"black", border:"solid black 1px",width:"100%"}}>Aggiungi al carrello</Button>

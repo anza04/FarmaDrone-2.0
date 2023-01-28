@@ -3,7 +3,7 @@ import '../css/prodotto.css'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import Button from '@mui/material/Button'
 
-function Moment() {
+function Okitask() {
 
   const [nProdotti, setNumero] = useState(0);
   
@@ -22,7 +22,7 @@ function Moment() {
         <div className="scheda">
 
           <div className="infoProdotto">
-            <img src="../public/momentact.png" className="fotoProdotto"/>
+            <img src="../public/okitask.png" className="fotoProdotto"/>
             <div className="testoProdotto">Tachipirina <br></br> 6€</div>
           </div>
           <div className="descrizione">
@@ -45,4 +45,4 @@ function Moment() {
   )
 }
 
-export default Moment
+export default Okitask
