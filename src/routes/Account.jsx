@@ -16,7 +16,7 @@ function Account() {
             <div className="bar">
             <Link to={'/home'} className="home">home</Link>
             </div>
-            <Link to={'/.assistenza'} className="circleAccount"><div className="imgAccount"></div></Link>
+            <Link to={'/assistenza'} className="circleAccount"><div className="imgAccount"></div></Link>
         </div>
 
         <div className="content">
