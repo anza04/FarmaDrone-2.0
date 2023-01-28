@@ -6,6 +6,10 @@
     left: 50%;
     transform: translateX(-50%);
   }
+
+  *{
+    transition: all 1s ease-in;
+  }
   
   .bar{
     height: 100%;
