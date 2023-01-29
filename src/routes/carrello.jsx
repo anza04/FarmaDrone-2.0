@@ -54,13 +54,12 @@ function Carrello() {
             
 
             <SchedaCarrello></SchedaCarrello>   
-            <SchedaCarrello></SchedaCarrello>   
-            <SchedaCarrello></SchedaCarrello>   
-            <SchedaCarrello></SchedaCarrello>   
-            <SchedaCarrello></SchedaCarrello>   
-            <SchedaCarrello></SchedaCarrello>   
-            <SchedaCarrello></SchedaCarrello>   
-            <SchedaCarrello></SchedaCarrello>   
+
+            <div className="totale">
+                <div className="testoPagamento">Totale: {nProdotti*6}</div>
+                <Button variant='contained' sx={{background:'green', marginTop:"10px"}}>Procedi al pagamento</Button>
+            </div> 
+            
 
         </div>
 

@@ -49,3 +49,20 @@
     font-weight: bold;
     margin-bottom: 5px;
   }
+
+  .totale{
+    margin-top: 20px;
+    height: 10vh;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    font-weight: bold;
+    font-size: 20px;
+    border-top: 3px solid black;
+  }
+
+  .testoPagamento{
+    margin-top: 10px;
+  }
