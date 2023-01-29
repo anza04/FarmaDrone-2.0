@@ -1,0 +1,35 @@
+
+  .nav-bar{
+      height: 10vh;
+      width: 100vw;
+      position: absolute;
+      bottom: 0%;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+    }
+  
+    body{
+      height: 100vh;
+      overflow-y: hidden;
+      color: black;
+    }
+    
+    .bar{
+      height: 100%;
+      width: 100%;
+      background: #DDDDDD;
+      border-top: 2px solid black;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    .account{
+      height: 50%;
+      width: 50%;
+      margin-bottom: 10px;
+      background: url("../assets/profile.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
