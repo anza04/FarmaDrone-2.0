@@ -16,12 +16,12 @@ let descrizione = "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nat
 
 function Catalogo() {
 
-  const [showDetails, setShowDetails] = useState(false);
+  const [showDetails, setShowDetails] = useState(true);
   const [nProdotti, setNumero] = useState(0);
 
   const Card = (props)=>
   (
-    <div className="card">
+    <div className="card" onClick={()=>setShowDetails(!showDetails)}>
       <div className="imgContainerCatalogo"><img className='imgCatalogo' src={props.src}/></div>
       <div className="nomeProdotto" fontSize="15px">{props.nome}</div>
       <div className="prezzo">{props.prezzo}</div>
@@ -86,7 +86,7 @@ function Catalogo() {
                   </div>
                 </div>
 
-                <div className="back"></div>
+                <div className="back" onClick={()=>setShowDetails(!showDetails)}></div>
     
               </div>
 
