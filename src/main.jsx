@@ -7,6 +7,7 @@ import Registrati from './routes/registrati'
 import Account from './routes/Account'
 import Catalogo from './routes/catalogo'
 import Assistenza from './routes/assistenza'
+import Carrello from './routes/carrello'
 //import ErrorPage from './error-page'
 import { BrowserRouter as Router, Route, Link, createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.css'
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
   {
     path: "registrati",
     element: <Registrati/>
+  },
+  {
+    path: "carrello",
+    element: <Carrello/>
   }
 ]);
 

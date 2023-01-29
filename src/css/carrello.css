@@ -1,0 +1,51 @@
+
+
+.schedaCarrello{
+    width: 90vw;
+    height: 20vh;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.contentCarrello{
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    overflow-y: scroll;
+}
+
+.fotoCarrello{
+    width: 35%;
+    margin: 10px;
+}
+
+.backCarrello
+{
+    width: 40px;
+    height: 40px;
+    background: url(../public/arrow.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 20px;
+  }
+
+  .destra{
+    width: 65%;
+    height: 100%;
+  }
+
+  .azioniProdottoCarrelo{
+    height: 60%;
+  }
+
+  .testoCarrello{
+    font-weight: bold;
+    margin-bottom: 5px;
+  }

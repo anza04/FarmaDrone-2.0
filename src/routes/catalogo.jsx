@@ -7,7 +7,12 @@ import { Button } from '@mui/material';
 const urlTachipirina = "https://meafarma.it/image/cache/data/pharmadb/012745117-900x900.jpg";
 const urlOki = "https://cdn.shopify.com/s/files/1/0564/4989/2467/products/301.jpg?v=1673435652";
 const urlNurofen = "https://th.bing.com/th/id/OIP.pviqZ_9W8FZABRY1iTYhtgHaEc?w=293&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7";
-const urlMomentact = "https://farmacianuova.it/image/cache/data/farmadati/H0005555-429x515.png"
+const urlMomentact = "https://farmacianuova.it/image/cache/data/farmadati/H0005555-429x515.png";
+
+let urlAttivo=urlTachipirina;
+let nomeAttivo="Tachipirina";
+let prezzo = "6€";
+let descrizione = "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus voluptatem placeat corporis dignissimos deserunt, est pariatur? Sequi voluptatem sunt obcaecati vero totam eum necessitatibus, nobis, quidem saepe vel pariatur veritatis!";
 
 function Catalogo() {
 
@@ -30,7 +35,7 @@ function Catalogo() {
             <div className="bar">
             <Link to={'/home'} className="home">home</Link>
             </div>
-            <Link to={'Account'} className="circleCarrello"><div className="imgCarrello"></div></Link>
+            <Link to={'/carrello'} className="circleCarrello"><div className="imgCarrello"></div></Link>
         </div>
 
         <div className="content">
@@ -62,12 +67,12 @@ function Catalogo() {
               <div className="scheda">
 
                 <div className="infoProdotto">
-                  <img src={urlTachipirina} className="fotoProdotto"/>
-                  <div className="testoProdotto">Tachipirina <br></br> 6€</div>
+                  <img src={urlAttivo} className="fotoProdotto"/>
+                  <div className="testoProdotto"> {nomeAttivo} <br></br> {prezzo}</div>
                 </div>
 
                 <div className="descrizione">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam mollitia quibusdam facilis obcaecati quidem, accusantium molestias porro ullam voluptatem maiores! Saepe neque recusandae voluptatum odit cumque tenetur itaque autem ad.
+                  {descrizione}
                 </div>
 
                 <div className="azioniProdotto">
