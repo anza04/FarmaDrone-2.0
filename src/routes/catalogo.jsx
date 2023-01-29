@@ -4,9 +4,9 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import { ShowChart } from '@mui/icons-material';
 
 const urlTachipirina = "https://meafarma.it/image/cache/data/pharmadb/012745117-900x900.jpg";
-const urlOki = "https://th.bing.com/th/id/OIP.QkNyhcZ7lYnBjqZsEWKvmwHaHa?w=184&h=184&c=7&r=0&o=5&dpr=1.3&pid=1.7";
+const urlOki = "https://cdn.shopify.com/s/files/1/0564/4989/2467/products/301.jpg?v=1673435652";
 const urlNurofen = "https://th.bing.com/th/id/OIP.pviqZ_9W8FZABRY1iTYhtgHaEc?w=293&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7";
-const urlMomentact = "https://www.bing.com/th?id=OPE.BB%2batqsRvSq7tQ300C300&pid=21.1&w=140&h=140&qlt=100&dpr=1,3"
+const urlMomentact = "https://farmacianuova.it/image/cache/data/farmadati/H0005555-429x515.png"
 
 function Catalogo() {
 
@@ -15,7 +15,7 @@ function Catalogo() {
   const Card = (props)=>
   (
     <div className="card">
-      <img src={props.src}/>
+      <div className="imgContainerCatalogo"><img className='imgCatalogo' src={props.src}/></div>
       <div className="nomeProdotto" fontSize="15px">{props.nome}</div>
       <div className="prezzo">{props.prezzo}</div>
     </div>

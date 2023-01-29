@@ -150,6 +150,14 @@
   text-align: center;
 }
 
-img{
+.imgContainerCatalogo{
   width: 80%;
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgCatalogo{
+  width: 100%;
 }
