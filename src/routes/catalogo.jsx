@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import '../css/catalogo.css'
+import '../css/prodotto.css'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import { Button } from '@mui/material';
 

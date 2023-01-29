@@ -19,7 +19,7 @@ function Account() {
             <Link to={'/assistenza'} className="circleAccount"><div className="imgAccount"></div></Link>
         </div>
 
-        <div className="content">
+        <div className="content" style={{overflowY:"scroll"}}>
 
           <div className="info">
             <div className="foto"></div>
