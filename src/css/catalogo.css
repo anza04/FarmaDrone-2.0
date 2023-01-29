@@ -65,7 +65,7 @@
   .content{
     width: 90%;
     overflow-x: hidden;
-    overflow-y:scroll;
+    overflow-y:hidden;
     display: flex;
     flex-direction: column;
     z-index: 0;
@@ -126,6 +126,7 @@
   justify-content: space-around;
   align-items: space-evenly;
   grid-template-columns: 48% 48%;
+  overflow-y:scroll;
 }
 
 .card{

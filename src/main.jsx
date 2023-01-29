@@ -42,26 +42,6 @@ const router = createBrowserRouter([
     element: <Assistenza/>
   },
   {
-    path: "catalogo/tachipirina",
-    element: <Tachipirina/>
-  },
-  {
-    path: "catalogo/nurofen",
-    element: <Nurofen/>
-  },
-  {
-    path: "catalogo/moment",
-    element: <Moment/>
-  },
-  {
-    path: "catalogo/nurofen",
-    element: <Nurofen/>
-  },
-  {
-    path: "catalogo/okitask",
-    element: <Okitask/>
-  },
-  {
     path: "registrati",
     element: <Registrati/>
   }
