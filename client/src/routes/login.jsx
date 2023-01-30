@@ -1,18 +1,18 @@
 import * as React from 'react';
+import { useEffect } from 'react';
 import '../css/login.css';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Checkbox from '@mui/material/Checkbox';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Link } from 'react-router-dom';
+import Axios from 'axios';
+import '../../../server/index'
 
 export default function Login() {
   const handleSubmit = (event) => {
@@ -23,6 +23,12 @@ export default function Login() {
       password: data.get('password'),
     });
   };
+
+  useEffect(()=>{
+    Axios.get("api/get").then((data)=>{
+      console.log(data);
+    });
+    },[])
 
   return (
     
