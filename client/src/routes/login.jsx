@@ -12,7 +12,7 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { Link } from 'react-router-dom';
 import Axios from 'axios';
-//import '../../../server/server'
+import '../../../server/server'
 
 export default function Login() {
   const handleSubmit = (event) => {
@@ -24,11 +24,11 @@ export default function Login() {
     });
   };
 
-  /*useEffect(()=>{
+  useEffect(()=>{
     Axios.get("api/get").then((data)=>{
       console.log(data);
     });
-    },[])*/
+    },[])
 
   return (
     
