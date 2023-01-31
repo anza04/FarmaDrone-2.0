@@ -21,7 +21,12 @@ function Catalogo() {
 
   const Card = (props)=>
   (
-    <div className="card" onClick={()=>setShowDetails(!showDetails)}>
+    <div className="card" onClick={()=>setShowDetails(
+      !showDetails,
+      urlAttivo = props.src,
+      nomeAttivo = props.nome,
+      prezzo = props.prezzo
+    )}>
       <div className="imgContainerCatalogo"><img className='imgCatalogo' src={props.src}/></div>
       <div className="nomeProdotto" fontSize="15px">{props.nome}</div>
       <div className="prezzo">{props.prezzo}</div>

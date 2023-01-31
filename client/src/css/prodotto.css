@@ -8,7 +8,6 @@
     background: url(../public/arrow.png);
     background-size: contain;
     background-repeat: no-repeat;
-    margin-bottom: 10px;
   }
 
 .scheda{
@@ -47,6 +46,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  margin-bottom: 40px;
+  margin-top: 20px;
 }
 
 .testoProdotto{

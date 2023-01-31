@@ -1,11 +1,13 @@
-const express = require("express");
+import express from "express";
 
 const app = express();
+import db from './config.js';
+
 
 app.get("/api", (req, res)=>{
-    res.json({
-        "users":["user1","user2","user2"]
-    })
+    db.query("SELECT * FROM posts", (err,result)=>{
+        console.log(err);
+    });
 })
 
 app.listen(5000, ()=>{console.log("listening....")});
