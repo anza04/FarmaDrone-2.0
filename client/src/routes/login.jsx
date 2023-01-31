@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import '../css/login.css';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
@@ -12,7 +12,7 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { Link } from 'react-router-dom';
 import Axios from 'axios';
-import '../../../server/server'
+//import '../../../server/server'
 
 export default function Login() {
   const handleSubmit = (event) => {
@@ -24,11 +24,13 @@ export default function Login() {
     });
   };
 
+  {/*const [postList,setPostList]=useState([]);
+
   useEffect(()=>{
-    Axios.get("api/get").then((data)=>{
-      console.log(data);
+    Axios.get("http://localhost:5000/api").then((data)=>{
+    setPostList(data.data)
     });
-    },[])
+    },[])*/}
 
   return (
     
@@ -73,14 +75,14 @@ export default function Login() {
               autoComplete="current-password"
             />
 
-            <Link to={'../home'}><Button
+            <Button
               type="submit"
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2 ,background: 'green'}}
             >
               Log in
-            </Button></Link>
+            </Button>
             <Grid container>
               <Grid item>
                 <a href="./registrati" variant="body2">

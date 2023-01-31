@@ -1,9 +1,9 @@
 import { createConnection } from 'mysql';
 const db = createConnection({
-host: "itismagistri.ddns.net",
-user: "gr1",
-password: "tm4763ka",
-database:"db_gr1" 
+host: "localhost",
+user: "root",
+password: "14062004",
+database:"saep" 
 })
 
 export default db;

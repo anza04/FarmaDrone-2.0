@@ -6,8 +6,8 @@ import db from './config.js';
 
 app.get("/api", (req, res)=>{
     db.query("SELECT * FROM anagrafica_utente", (err,result)=>{
-        console.log(err);
-        console.log(result);
+        if (err) {console.log(err)}
+        res.send(result);
     });
 })
 

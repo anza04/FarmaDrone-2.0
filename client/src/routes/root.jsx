@@ -17,7 +17,7 @@ export default function Root() {
 
   return (
     <div className="video">
-      <video src="/My_video.mp4" autoPlay muted loop></video>
+      <video src="/FTO video.mp4" autoPlay muted loop></video>
      
     <div className="layer"></div>
 
