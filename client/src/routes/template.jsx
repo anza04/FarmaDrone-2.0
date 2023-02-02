@@ -14,7 +14,7 @@ function NomeCosaFate() {
             <Link to={'/Account'} className="circleAccount"><div className="account"></div></Link>
         </div>
 
-
+        
 
     </div>
   )

@@ -8,6 +8,7 @@ const urlTachipirina = "https://meafarma.it/image/cache/data/pharmadb/012745117-
 const urlOki = "https://cdn.shopify.com/s/files/1/0564/4989/2467/products/301.jpg?v=1673435652";
 const urlNurofen = "https://th.bing.com/th/id/OIP.pviqZ_9W8FZABRY1iTYhtgHaEc?w=293&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7";
 const urlMomentact = "https://farmacianuova.it/image/cache/data/farmadati/H0005555-429x515.png";
+const urlInsulina = "https://www.mcguffmedical.com/content/images/thumbs/0010734_insulin-lantus-insulin-glargine-injection-100uml-mdv-10ml-vial.jpeg";
 
 let urlAttivo=urlTachipirina;
 let nomeAttivo="Tachipirina";
@@ -57,6 +58,14 @@ function Catalogo() {
             </div>}
 
             {showDetails && <div className="prodotti">
+              <Card nome="tachipirina" prezzo="6€" src={urlTachipirina}></Card>
+              <Card nome="oki task" prezzo="5€" src={urlOki}></Card>
+              <Card nome="nurofen" prezzo="8€" src={urlNurofen}></Card>
+              <Card nome="moment act" prezzo="6€" src={urlMomentact}></Card>
+              <Card nome="tachipirina" prezzo="6€" src={urlTachipirina}></Card>
+              <Card nome="insulina" prezzo="10€" src={urlInsulina}></Card>
+              <Card nome="nurofen" prezzo="8€" src={urlNurofen}></Card>
+              <Card nome="moment act" prezzo="6€" src={urlMomentact}></Card>
               <Card nome="tachipirina" prezzo="6€" src={urlTachipirina}></Card>
               <Card nome="oki task" prezzo="5€" src={urlOki}></Card>
               <Card nome="nurofen" prezzo="8€" src={urlNurofen}></Card>

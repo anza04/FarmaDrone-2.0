@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import '../css/account.css'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import Cookies from 'universal-cookie'
 
 
 function Account() {
@@ -8,6 +9,8 @@ function Account() {
   const Element = (props)=>{
     return <div className='element'>{props.titolo}</div>
   }
+
+  const cookies = new Cookies();
   
   return (
     <div className="Account">
@@ -24,9 +27,9 @@ function Account() {
           <div className="info">
             <div className="foto"></div>
             <div className="testo">
-              <div className="nome">Federico Anzani</div>
-              <div className="telefono">+39-111-222-3333</div>
-              <div className="email">federico.anzani04@gmail.com</div>
+              <div className="nome">{cookies.get("nome")+" "+cookies.get("cognome")}</div>
+              <div className="telefono">{cookies.get("telefono")}</div>
+              <div className="email">{cookies.get("mail")}</div>
             </div>
           </div>
 

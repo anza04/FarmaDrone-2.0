@@ -11,26 +11,58 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Axios from 'axios';
-//import '../../../server/server'
+import Cookie from 'universal-cookie';
 
 export default function Login() {
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
-  };
 
-  {/*const [postList,setPostList]=useState([]);
+  let trovato = 0;
+
+  const cookies = new Cookie()
+
+  const [valori, setValori] = useState({});
+  const [errorLogin, setErrorLogin] = useState();
+
+  const navigate = useNavigate();
 
   useEffect(()=>{
-    Axios.get("http://localhost:5000/api").then((data)=>{
-    setPostList(data.data)
+    Axios.get("http://localhost:5000/credentials",  { crossdomain: true }).then(response => {
+      setValori(response.data)
     });
-    },[])*/}
+  },[])
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const res = new FormData(event.currentTarget);
+    let i=0;
+    for(i=0;i<2;i++)
+    {
+      if(res.get('username')==valori[i].username && res.get('password')==valori[i].hashPassword)
+      {        
+        console.log(res.get('username'),valori[i].username)
+        try {
+          console.log(valori[i].nome)
+          cookies.remove('nome')
+          cookies.remove('cognome')
+          cookies.remove('telefono')
+          cookies.remove('mail')
+          cookies.set('nome', valori[i].nome, { path: '/' });
+          cookies.set('cognome', valori[i].cognome, { path: '/' });
+          cookies.set('mail', valori[i].mail, { path: '/' });
+          cookies.set('telefono', valori[i].cellulare, { path: '/' });
+        } catch (error) {
+          console.log(error)
+        }
+        navigate('/home',{state:{"nome":valori[i].nome, "cognome":valori[i].cognome, "mail":valori[i].mail, "telefono":valori[i].cellulare}});
+        trovato = 1;
+      }
+    };
+    if(trovato==0)
+    {
+      setErrorLogin(1);
+    }
+  };
 
   return (
     
@@ -50,6 +82,9 @@ export default function Login() {
           <Typography component="h1" variant="h5">
             Sign in
           </Typography>
+          {errorLogin &&
+              <div className='errore' style={{color:"red", fontWeight:"bold", width:"100%", textAlign:"center", marginTop:"10px"}}>Nome utente o Password errati</div>
+            }
           <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1}}>
 
             
@@ -57,10 +92,10 @@ export default function Login() {
               margin="normal"
               required
               fullWidth
-              id="email"
-              label="Email"
-              name="email"
-              autoComplete="email"
+              id="nomeUtente"
+              label="Username"
+              name="username"
+              autoComplete="username"
               autoFocus
             />
 
@@ -83,6 +118,7 @@ export default function Login() {
             >
               Log in
             </Button>
+
             <Grid container>
               <Grid item>
                 <a href="./registrati" variant="body2">
