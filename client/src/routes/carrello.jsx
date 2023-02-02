@@ -53,8 +53,33 @@ function Carrello() {
         <div className="contentCarrello">  
             
 
-            <SchedaCarrello src={urlTachipirina} nome="Tachipirina" counter={nTachipirina}></SchedaCarrello>   
-            <SchedaCarrello src={urlInsulina} nome="Insulina" counter={nInsu}></SchedaCarrello>   
+          <div className="schedaCarrello">
+            <img src={urlTachipirina} className="fotoCarrello"/>
+
+            <div className="destraCarrello">
+              <div className="testoCarrello"> Tachipirina <br></br> tot: {nTachipirina*PrezzoTachi}€</div>
+
+              <div className="azioniProdottoCarrello">
+                  <Button onClick={()=>setTachi(nTachipirina-1)} variant="contained" sx={{background:"white", color:"black", border:"solid black 1px",width:"30px", height:"30px"    }}>-</Button>
+                  <Button variant="contained" sx={{background:"#D9D9D9", color:"black", border:"solid black 1px",width:"40px", height:"30px"}}>{nTachipirina}</Button>
+                  <Button onClick={()=>setTachi(nTachipirina+1)} variant="contained" sx={{background:"white", color:"black", border:"solid black 1px",width:"30px", height:"30px"}}>+</Button>
+              </div>
+            </div>
+          </div>
+
+          <div className="schedaCarrello">
+            <img src={urlInsulina} className="fotoCarrello"/>
+
+            <div className="destraCarrello">
+              <div className="testoCarrello"> Insulina <br></br> tot: {nInsu*PrezzoInsu}€</div>
+
+              <div className="azioniProdottoCarrello">
+                  <Button onClick={()=>setInsu(nInsu-1)} variant="contained" sx={{background:"white", color:"black", border:"solid black 1px",width:"30px", height:"30px"    }}>-</Button>
+                  <Button variant="contained" sx={{background:"#D9D9D9", color:"black", border:"solid black 1px",width:"40px", height:"30px"}}>{nInsu}</Button>
+                  <Button onClick={()=>setInsu(nInsu+1)} variant="contained" sx={{background:"white", color:"black", border:"solid black 1px",width:"30px", height:"30px"}}>+</Button>
+              </div>
+            </div>
+          </div>    
 
             <div className="totale">
                 <div className="testoPagamento">Totale: €</div>
