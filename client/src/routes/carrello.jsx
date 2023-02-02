@@ -4,30 +4,30 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import { Button } from '@mui/material';
 
 const urlTachipirina = "https://meafarma.it/image/cache/data/pharmadb/012745117-900x900.jpg";
-const urlOki = "https://cdn.shopify.com/s/files/1/0564/4989/2467/products/301.jpg?v=1673435652";
-const urlNurofen = "https://th.bing.com/th/id/OIP.pviqZ_9W8FZABRY1iTYhtgHaEc?w=293&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7";
-const urlMomentact = "https://farmacianuova.it/image/cache/data/farmadati/H0005555-429x515.png";
+const urlInsulina = "https://www.mcguffmedical.com/content/images/thumbs/0010734_insulin-lantus-insulin-glargine-injection-100uml-mdv-10ml-vial.jpeg";
+
 
 function Carrello() {
 
   const SchedaCarrello = (props)=>{
     return  <div className="schedaCarrello">
 
-        <img src={urlTachipirina} className="fotoCarrello"/>
+        <img src={props.src} className="fotoCarrello"/>
 
         <div className="destraCarrello">
-            <div className="testoCarrello"> tachipirina <br></br> tot: {nProdotti*6}</div>
+            <div className="testoCarrello"> {props.nome} <br></br> tot: </div>
 
             <div className="azioniProdottoCarrello">
-                <Button onClick={()=>setNumero(nProdotti-1)} variant="contained" sx={{background:"white", color:"black", border:"solid black 1px",width:"30px", height:"30px"    }}>-</Button>
-                <Button variant="contained" sx={{background:"#D9D9D9", color:"black", border:"solid black 1px",width:"40px", height:"30px"}}>{nProdotti}</Button>
-                <Button onClick={()=>setNumero(nProdotti+1)} variant="contained" sx={{background:"white", color:"black", border:"solid black 1px",width:"30px", height:"30px"}}>+</Button>
+                <Button onClick={()=>document.getElementById("counter").innerText=document.getElementById("counter").innerText-1} variant="contained" sx={{background:"white", color:"black", border:"solid black 1px",width:"30px", height:"30px"    }}>-</Button>
+                <Button id='counter' variant="contained" sx={{background:"#D9D9D9", color:"black", border:"solid black 1px",width:"40px", height:"30px"}}>{props.counter}</Button>
+                <Button onClick={()=>document.getElementById("counter").innerText=document.getElementById("counter").innerText+1} variant="contained" sx={{background:"white", color:"black", border:"solid black 1px",width:"30px", height:"30px"}}>+</Button>
             </div>
         </div>
     </div>    
   }
 
-  const [nProdotti, setNumero] = useState(0);
+  const [nTachipirina, setTachi] = useState(1);
+  const [nInsu, setInsu] = useState(1);
 
   const Card = (props)=>
   (
@@ -53,10 +53,11 @@ function Carrello() {
         <div className="contentCarrello">  
             
 
-            <SchedaCarrello></SchedaCarrello>   
+            <SchedaCarrello src={urlTachipirina} nome="Tachipirina" counter={nTachipirina}></SchedaCarrello>   
+            <SchedaCarrello src={urlInsulina} nome="Insulina" counter={nInsu}></SchedaCarrello>   
 
             <div className="totale">
-                <div className="testoPagamento">Totale: {nProdotti*6}</div>
+                <div className="testoPagamento">Totale: €</div>
                 <Button variant='contained' sx={{background:'green', marginTop:"10px"}}>Procedi al pagamento</Button>
             </div> 
             

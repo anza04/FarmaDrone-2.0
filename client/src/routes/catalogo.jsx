@@ -20,6 +20,10 @@ function Catalogo() {
   const [showDetails, setShowDetails] = useState(true);
   const [nProdotti, setNumero] = useState(0);
 
+  const Aggiungi = ()=>{
+    console.log("ciao")
+  }
+
   const Card = (props)=>
   (
     <div className="card" onClick={()=>setShowDetails(
@@ -96,7 +100,7 @@ function Catalogo() {
                     <Button onClick={()=>setNumero(nProdotti+1)} variant="contained" sx={{background:"white", color:"black", border:"solid black 1px",width:"25%"}}>+</Button>
                   </div>
                   <div className="sotto">
-                    <Button variant="contained" sx={{background:"#D9D9D9", color:"black", border:"solid black 1px",width:"100%"}}>Aggiungi al carrello</Button>
+                    <Button variant="contained" sx={{background:"#D9D9D9", color:"black", border:"solid black 1px",width:"100%"}} onClick={()=>Aggiungi()}>Aggiungi al carrello</Button>
                   </div>
                 </div>
 
