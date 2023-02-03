@@ -4,10 +4,10 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import { Button } from '@mui/material';
 
 const urlTachipirina = "https://meafarma.it/image/cache/data/pharmadb/012745117-900x900.jpg";
-const urlInsulina = "https://www.mcguffmedical.com/content/images/thumbs/0010734_insulin-lantus-insulin-glargine-injection-100uml-mdv-10ml-vial.jpeg";
+const urlAulin = "https://www.petroneonline.com/img/600/744/resize/a/u/aulin_-_3_gel_confezione_50_gr_2nd.jpg";
 
-const PrezzoTachi=6;
-const PrezzoInsu=10;
+const PrezzoTachi=5.20;
+const PrezzoInsu=9.70;
 
 function Carrello() {
 
@@ -49,10 +49,10 @@ function Carrello() {
 
         {showInsu &&
           <div className="schedaCarrello">
-            <img src={urlInsulina} className="fotoCarrello"/>
+            <img src={urlAulin} className="fotoCarrello"/>
 
             <div className="destraCarrello">
-              <div className="testoCarrello"> Insulina <br></br> tot: {nInsu*PrezzoInsu}€</div>
+              <div className="testoCarrello"> Aulin <br></br> tot: {nInsu*PrezzoInsu}€</div>
 
               <div className="azioniProdottoCarrello">
                   <Button onClick={()=>setInsu(nInsu-1, nInsu<2?setShowInsu(false):null)} variant="contained" sx={{background:"white", color:"black", border:"solid black 1px",width:"30px", height:"30px"    }}>-</Button>

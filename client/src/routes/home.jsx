@@ -13,11 +13,12 @@ const urlTachipirina = "https://meafarma.it/image/cache/data/pharmadb/012745117-
 const urlOki = "https://cdn.shopify.com/s/files/1/0564/4989/2467/products/301.jpg?v=1673435652";
 const urlNurofen = "https://th.bing.com/th/id/OIP.pviqZ_9W8FZABRY1iTYhtgHaEc?w=293&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7";
 const urlMomentact = "https://farmacianuova.it/image/cache/data/farmadati/H0005555-429x515.png";
+const urlAulin = "https://www.petroneonline.com/img/600/744/resize/a/u/aulin_-_3_gel_confezione_50_gr_2nd.jpg";
 const urlInsulina = "https://www.mcguffmedical.com/content/images/thumbs/0010734_insulin-lantus-insulin-glargine-injection-100uml-mdv-10ml-vial.jpeg";
 
-  let urlAttivo=urlInsulina;
-  let nomeAttivo="Insulina";
-  let prezzo = "10€";
+  let urlAttivo=urlAulin;
+  let nomeAttivo="Aulin";
+  let prezzo = "9,70€";
   let descrizione = "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus voluptatem placeat corporis dignissimos deserunt, est pariatur? Sequi voluptatem sunt obcaecati vero totam eum necessitatibus, nobis, quidem saepe vel pariatur veritatis!";
 
   const [showDetails, setShowDetails] = useState(true);
@@ -47,7 +48,7 @@ const urlInsulina = "https://www.mcguffmedical.com/content/images/thumbs/0010734
             </div>
             <div className="ricette">
                 <div className="titoloRicette">Le tue Ricette</div>
-                <Ricetta farmaco="insulina" prezzo="10€" dataEmissione="02/02/2023"></Ricetta>
+                <Ricetta farmaco="Aulin" prezzo="9,70€" dataEmissione="02/02/2023"></Ricetta>
             </div>
         </div>}
 
